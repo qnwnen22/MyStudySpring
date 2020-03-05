@@ -11,5 +11,6 @@ public interface MemberService {
 	public boolean loginCheck(MemberDTO dto, HttpSession session); //로그인 체크
 	public int login(String userid, String passwd); //로그인
 	public String findID(String name, String email); //아이디찾기
+	public void logout(HttpSession session);
 	
 }

@@ -36,6 +36,7 @@ public class MemberServiceImpl implements MemberService {
 			session.setAttribute("nickname", dto2.getNickname());
 			System.out.println(session.getAttribute("userid"));
 			System.out.println(session.getAttribute("nickname"));
+			
 		}
 		return result;
 	}
@@ -54,6 +55,11 @@ public class MemberServiceImpl implements MemberService {
 	public String findID(String name, String email) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void logout(HttpSession session) {
+		session.invalidate();
 	}
 
 }

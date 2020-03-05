@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%@ include file="../include/header.jsp"%>
+<script type="text/javascript">
+</script>
 <script>
-/* 실시간 중복확인 코드 보류
+
 $(function(){
 	var userid=$("#userid").val();
 	
@@ -23,56 +25,17 @@ $(function(){
 		document.idCFrom.action="${path}/member/idC.do";
 		document.idCFrom.submit();
 	}	
-}); */
-
-/* $(function(){
-	$("#btn_signUp").click(function(){
-		var userid=$("#userid").val();
-		var passwd=$("#passwd").val();
-		var passwdC=$("#passwdC").val();
-		var name=$("#name").val();
-		var nickname=$("#nickname").val();
-		var email=$("#email").val();
-		var hp=$("#hp").val();
-		var addr=$("#addr").val();
-
-		if(userid==""){
-			alert("아이디를 입력해주세요.");
-			$("#userid").focus();
-			return;
-		}
-		if(passwd==""){
-			alert("비밀번호를 입력해주세요.");
-			$("#passwd").focus();
-			return;
-		}
-		if(passwdC==""){
-			alert("비밀번호확인을 입력해주세요.");
-			$("#passwdC").focus();
-			return;
-		}
-		if(name==""){
-			alert("이름을 입력해주세요.");
-			$("#name").focus();
-			return;
-		}
-		if(nickname==""){
-			alert("닉네임을 입력해주세요.");
-			$("#nickname").focus();
-			return;
-		}
-		document.signUp_form.action="${path}/member/signUp.do";
-		document.signUp_form.submit();
-		
-	
-	});
 });
- */
+
+$(function(){
+
+});
+
 
 </script>
 </head>
 <body>
-	<%-- <%@ include file="../include/menu.jsp"%>
+	<%@ include file="../include/menu.jsp"%>
 	<div class="container" style="border: 1px solid;">
 		<h2>${message}</h2>
 		<hr>
@@ -127,6 +90,6 @@ $(function(){
 			| <a href="${path}/member/findID.do">아이디찾기</a> | <a
 				href="${path}/member/findPW.do">비밀번호 찾기</a> |
 		</div>
-	</div> --%>
+	</div>
 </body>
 </html>

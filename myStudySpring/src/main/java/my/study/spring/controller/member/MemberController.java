@@ -44,6 +44,12 @@ public class MemberController {
 		model.addAttribute("message","로그인 페이지");
 		return "member/login";
 	}
+	@RequestMapping("logout.do")
+	public String logout(HttpSession session) {
+		memberService.logout(session);
+		return "home";
+		
+	}
 	
 	@RequestMapping("signUp.do")
 	public String signUp(Model model) {
