@@ -25,6 +25,7 @@ public class MemberController {
 	
 	@RequestMapping("login_check.do")
 	public ModelAndView login_check(MemberDTO dto, HttpSession session) {
+		System.out.println("컨트롤러");
 		boolean result=memberService.loginCheck(dto,session);
 		ModelAndView mav=new ModelAndView();
 		if(result) {
@@ -36,8 +37,6 @@ public class MemberController {
 		return mav;
 		
 	}
-	
-	
 	
 	@RequestMapping("login.do")
 	public String login(Model model) {
@@ -67,13 +66,13 @@ public class MemberController {
 		return "member/findPW";
 	}
 	
-	@RequestMapping("signUp.do")
-	public ModelAndView signUp(MemberDTO dto) {
-		
-		ModelAndView mav=new ModelAndView();
-		
-		return mav;
-	}
+//	@RequestMapping("signUp.do")
+//	public ModelAndView signUp(MemberDTO dto) {
+//		
+//		ModelAndView mav=new ModelAndView();
+//		
+//		return mav;
+//	}
 	
 //	@RequestMapping("idC.do")
 //	public String idC(Model model) {

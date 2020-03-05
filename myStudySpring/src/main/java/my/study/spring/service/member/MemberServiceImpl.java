@@ -28,10 +28,11 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public boolean loginCheck(MemberDTO dto, HttpSession session) {
+		System.out.println("서비스");
 		boolean result=memberDao.loginCheck(dto, session);
 		if(result) {
 			MemberDTO dto2=viewMember(dto.getUserid());
-			session.setAttribute("userid", dto2.getUserid());
+			session.setAttribute("userid", dto.getUserid());
 			session.setAttribute("nickname", dto2.getNickname());
 			System.out.println(session.getAttribute("userid"));
 			System.out.println(session.getAttribute("nickname"));

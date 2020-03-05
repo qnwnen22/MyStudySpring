@@ -28,8 +28,9 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public boolean loginCheck(MemberDTO dto, HttpSession session) {
-		String name=sqlSession.selectOne("member.login_check", dto);
-		return (name!=null) ? true : false;
+		System.out.println("DAO");
+		String nickname=sqlSession.selectOne("member.login_check", dto);
+		return (nickname==null) ? false : true;
 	}
 	
 	public MemberDTO viewMember(String userid) {

@@ -12,24 +12,24 @@
 |
 <a href="#">API컨텐츠</a>
 |
-<%-- <c:if test="${sessionScope.admin_userid != null}">
+<c:if test="${sessionScope.admin_userid != null}">
 	<a href="${path}/shop/product/write.do">상품등록</a> | 
 </c:if>
 <c:if test="${sessionScope.userid != null}">
 	<a href="${path}/shop/cart/list.do">장바구니</a> | 
-</c:if> --%>
+</c:if>
 
 <div style="display: inline; float: right;">
-	<%-- <c:choose>
-		<c:when test="${sessionScope.userid == null }"> --%>
-	| <a href="${path}/member/login.do">로그인</a> 
-	| <a href="${path}/member/signUp.do">회원가입</a> |
-	<%-- </c:when>
+	<c:choose>
+		<c:when test="${sessionScope.userid == null }">
+	| <a href="${path}/member/login.do">로그인</a> | <a
+				href="${path}/member/signUp.do">회원가입</a> |
+	</c:when>
 		<c:otherwise>
-			${sessionScope.name}님이 로그인중입니다.
+			${sessionScope.nickname}님이 로그인중입니다.
 			<a href="${path}/member/logout.do">로그아웃</a>
 		</c:otherwise>
-	</c:choose> --%>
+	</c:choose>
 </div>
 
 
