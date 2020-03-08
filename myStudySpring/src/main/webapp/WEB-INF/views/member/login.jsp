@@ -71,5 +71,6 @@ $(function(){
 				<a href="${path}/member/findPW.do">비밀번호 찾기</a>
 			</div>
 	</div>
+	<%@ include file="../include/footer.jsp"%>
 </body>
 </html>

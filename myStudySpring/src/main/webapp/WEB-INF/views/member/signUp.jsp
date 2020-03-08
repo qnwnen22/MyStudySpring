@@ -9,28 +9,15 @@
 <script type="text/javascript">
 </script>
 <script>
+$(document).ready(function(){
+	alert("ready test");
 
-$(function(){
-	var userid=$("#userid").val();
-	
-	if(userid!=""){
-		$.ajax({
-			type: "post",
-			url: "${path}/member/idC.do",
-			data: userid,
-			success: function(result){
-				$("#idC_result").text(result);
-			}
-		});
-		document.idCFrom.action="${path}/member/idC.do";
-		document.idCFrom.submit();
-	}	
+	$("#userid").mouseover(function(){
+		alert("마우스오버");
+		var i="";
+		
+	});
 });
-
-$(function(){
-
-});
-
 
 </script>
 </head>
@@ -91,5 +78,6 @@ $(function(){
 				href="${path}/member/findPW.do">비밀번호 찾기</a> |
 		</div>
 	</div>
+	<%@ include file="../include/footer.jsp"%>
 </body>
 </html>
